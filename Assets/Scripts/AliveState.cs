@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class AliveState : IState
 {
-    public void SpriteChange()
+    [SerializeField] Sprite alive;
+    
+    public void SpriteChange(Pet pet)
     {
-
+        pet.GetComponent<SpriteRenderer>().sprite = alive;
     }
 }

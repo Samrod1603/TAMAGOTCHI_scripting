@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DeadState : IState
 {
-    public void SpriteChange()
-    {
+    [SerializeField] Sprite dead;
 
+    public void SpriteChange(Pet pet)
+    {
+        pet.GetComponent<SpriteRenderer>().sprite = dead;
     }
 }
