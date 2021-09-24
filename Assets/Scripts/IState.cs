@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IState
 {
-    void SpriteChange();
+    void SpriteChange(Pet pet);
 }

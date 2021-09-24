@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dog : Pets
+public class Dog : Pet
 {
-
-    public override void Names()
+    public override void Name()
     {
         print("Perrete");
-        
     }
 }
