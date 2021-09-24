@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class Pet : MonoBehaviour
 {
+    [SerializeField] NeedsSO channel;
     private IState currentState;
 
     public abstract void Name();
@@ -18,5 +19,19 @@ public abstract class Pet : MonoBehaviour
     {
         currentState = new DeadState();
         currentState.SpriteChange(this);
+    }
+
+    private void SliderChange(float hunger)
+    {
+
+    }
+    private void OnEnable()
+    {
+        channel.OnNeedChanged += SliderChange;
+
+    }
+    private void OnDisable()
+    {
+        channel.OnNeedChanged -= SliderChange;
     }
 }
