@@ -28,6 +28,9 @@ public class TextNoti : MonoBehaviour, iNotification, ISound
 
     public void PlaySound()
     {
-        sound.Play();
+        if (sound.isPlaying == false)
+        {
+            sound.Play();
+        }
     }
 }
