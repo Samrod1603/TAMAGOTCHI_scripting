@@ -6,10 +6,12 @@ public class StateController : MonoBehaviour
 {
     [SerializeField] private NeedsSO needso;
     private iNotification _inoti;
+    private ISound _isound;
 
     void Start()
     {
         _inoti = GetComponent<iNotification>();
+        _isound = GetComponent<ISound>();
     }
     
     
@@ -28,6 +30,7 @@ public class StateController : MonoBehaviour
         if (value <= 50)
         {
             _inoti.ShowMessage();
+            _isound?.PlaySound();
         }
         else
         {

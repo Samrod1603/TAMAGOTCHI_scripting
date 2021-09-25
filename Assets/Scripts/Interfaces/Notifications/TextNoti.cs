@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TextNoti : MonoBehaviour, iNotification
+public class TextNoti : MonoBehaviour, iNotification, ISound
 {
-    [SerializeField] private TextMeshProUGUI txt;
+    [SerializeField] private GameObject noti;
+    private TextMeshProUGUI txt;
+    private AudioSource sound;
     private string txtString = "Necesito cuidados";
+    
+    void Awake()
+    {
+        txt = noti.GetComponent<TextMeshProUGUI>();
+        sound = noti.GetComponent<AudioSource>();
+    }
     
     public void ShowMessage()
     {
@@ -16,5 +24,10 @@ public class TextNoti : MonoBehaviour, iNotification
     public void UnshowMessage()
     {
         txt.text = "";
+    }
+
+    public void PlaySound()
+    {
+        sound.Play();
     }
 }
