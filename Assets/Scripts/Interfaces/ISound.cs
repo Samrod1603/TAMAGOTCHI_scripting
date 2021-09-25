@@ -5,4 +5,5 @@ using UnityEngine;
 public interface ISound
 {
     void PlaySound();
+    void PauseSound(); 
 }
