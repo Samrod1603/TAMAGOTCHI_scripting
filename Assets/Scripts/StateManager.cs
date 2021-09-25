@@ -4,38 +4,32 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
-    //singleton
-    /*private static StateManager instance = null;
-    private StateManager() { }
-
-    public static StateManager Instance
-    {
-        get
-        {
-            if (instance == null)
-                instance = new StateManager();
-            return instance;
-        }
-    }*/
-
     [SerializeField] private NeedsSO channel;
-    float value;
 
-    [SerializeField] Pets pet;
+    public Pets pet;
 
     private void Start()
     {
-        value = channel.needValue;
+        pet.Action();
     }
 
     //eventos
 
-    void StateUpdate()
+    void StateUpdate(float value)
     {
         if (value == 0f)
         {
             print("murido"); //
             //pet.currentState = new DeadState();
         }
+    }
+    private void OnEnable()
+    {
+        channel.OnNeedChanged += StateUpdate;
+
+    }
+    private void OnDisable()
+    {
+        channel.OnNeedChanged -= StateUpdate;
     }
 }

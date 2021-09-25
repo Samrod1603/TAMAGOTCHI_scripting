@@ -8,7 +8,7 @@ public class Bunny : Pets
     {
         print("Hopps");
     }
-    public void Jump()
+    public override void Action()
     {
         print("Jumping!");
     }

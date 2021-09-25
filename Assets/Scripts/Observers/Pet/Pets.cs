@@ -7,4 +7,5 @@ public abstract class Pets : MonoBehaviour
     public IState currentState;
 
     public abstract void PrintName();
+    public abstract void Action();
 }

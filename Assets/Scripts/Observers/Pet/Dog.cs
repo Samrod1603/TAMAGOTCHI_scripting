@@ -8,7 +8,7 @@ public class Dog : Pets
     {
         print("Perrete");
     }
-    public void Bark()
+    public override void Action()
     {
         print("Woof!");
     }
