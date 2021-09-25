@@ -8,10 +8,5 @@ public abstract class Pets : MonoBehaviour
 
     public abstract void PrintName();
     public abstract void Action();
-
-    public virtual void Dead()
-    {
-        currentState = new DeadState();
-        currentState.SpriteChange(this);
-    }
+    
 }
