@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AliveState : IState
+public class AliveState :  IState
 {
-    [SerializeField] Sprite alive;
-    
-    public void SpriteChange(Pet pet)
+   
+    public void SpriteChange(Pets pet)
     {
-        pet.GetComponent<SpriteRenderer>().sprite = alive;
+        pet.GetComponent<SpriteRenderer>().color = Color.white;
     }
 }

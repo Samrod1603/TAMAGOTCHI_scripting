@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dog : Pets
 {
+    
     public override void PrintName()
     {
         print("Perrete");
@@ -12,4 +13,6 @@ public class Dog : Pets
     {
         print("Woof!");
     }
+   
 }
+

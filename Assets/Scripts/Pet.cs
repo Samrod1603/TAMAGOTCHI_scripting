@@ -11,12 +11,13 @@ public abstract class Pet : MonoBehaviour
     public void Alive()
     {
         currentState = new AliveState();
-        currentState.SpriteChange(this);
+       // currentState.SpriteChange(this);
     }
 
     public void Dead()
     {
         currentState = new DeadState();
-        currentState.SpriteChange(this);
+       // currentState.SpriteChange(this);
+       
     }
 }
