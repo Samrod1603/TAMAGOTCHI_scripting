@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Pet : MonoBehaviour
 {
-    private IState currentState;
+    public IState currentState;
 
     public abstract void Name();
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public abstract class Pets : MonoBehaviour
 {
-    
-    public abstract void Names();
+    public IState currentState;
+
+    public abstract void PrintName();
+    public abstract void Action();
 }
