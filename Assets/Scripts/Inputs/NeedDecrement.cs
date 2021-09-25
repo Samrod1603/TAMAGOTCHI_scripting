@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NeedDecrement : MonoBehaviour
 {
-    [SerializeField] private NeedsSO channel;
+    [SerializeField] protected NeedsSO channel;
 
     void Start()
     {
