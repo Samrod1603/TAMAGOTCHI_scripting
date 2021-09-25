@@ -27,7 +27,7 @@ public class StateController : MonoBehaviour
 
     void chckBar(float value)
     {
-        if (value <= 50)
+        if (value <= 50 && value != 0)
         {
             _inoti.ShowMessage();
             _isound?.PlaySound();
