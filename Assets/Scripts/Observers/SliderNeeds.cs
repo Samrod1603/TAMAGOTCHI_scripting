@@ -12,9 +12,9 @@ public class SliderNeeds : MonoBehaviour
     {
         sliderNeed=GetComponent<Slider>();
     }
-    private void SliderChange(float hunger)
+    private void SliderChange(float value)
     {
-        sliderNeed.value = hunger;
+        sliderNeed.value = value;
     }
     private void OnEnable()
     {
