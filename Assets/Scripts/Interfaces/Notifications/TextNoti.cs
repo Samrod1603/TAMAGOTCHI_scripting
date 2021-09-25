@@ -33,4 +33,8 @@ public class TextNoti : MonoBehaviour, iNotification, ISound
             sound.Play();
         }
     }
+    public void PauseSound()
+    {
+        sound.Stop(); 
+    }
 }

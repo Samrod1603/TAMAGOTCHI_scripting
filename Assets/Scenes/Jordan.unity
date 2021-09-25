@@ -390,7 +390,7 @@ Transform:
   - {fileID: 1873975591}
   - {fileID: 1962565581}
   m_Father: {fileID: 1773230961}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &222646980
 MonoBehaviour:
@@ -1086,7 +1086,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1730d37440022934eb859b60b69364fb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f6033a572c2fe0741abe90f6fa4d92ae, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1978,8 +1978,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 222646979}
   - {fileID: 1848559009}
+  - {fileID: 222646979}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2122,7 +2122,7 @@ Transform:
   m_Children:
   - {fileID: 1083334442}
   m_Father: {fileID: 1773230961}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1848559010
 SpriteRenderer:
