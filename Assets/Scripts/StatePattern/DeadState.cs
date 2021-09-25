@@ -7,6 +7,6 @@ public class DeadState : IState
     public void SpriteChange(Pets pet)
     {
         pet.GetComponent<SpriteRenderer>().color = Color.red;
-        GameObject.FindGameObjectWithTag("Button").SetActive(false);
+        GameObject.FindGameObjectWithTag("Button")?.SetActive(false);
     }
 }
