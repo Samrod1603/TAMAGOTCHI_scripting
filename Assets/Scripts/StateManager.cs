@@ -5,6 +5,10 @@ using UnityEngine;
 public class StateManager : MonoBehaviour
 {
     [SerializeField] private NeedsSO channel;
+
+    private AliveState aliveState = new AliveState();
+    private DeadState deadState = new DeadState();
+    
    
     public Pets pet;
 
@@ -13,9 +17,8 @@ public class StateManager : MonoBehaviour
 
     private void Start()
     {
-      
         pet.Action();
-        pet.currentState = new AliveState();
+        pet.currentState = aliveState;
         pet.currentState.SpriteChange(pet);
     }
 
@@ -28,13 +31,8 @@ public class StateManager : MonoBehaviour
         {
             
             print("murido"); //
-            pet.Dead();
-           // button.SetActive(false);
-          
-        }
-        else if (value > 0f)
-        {
-          
+            pet.currentState = deadState;
+            pet.currentState.SpriteChange(pet);
         }
     }
     private void OnEnable()
@@ -46,9 +44,5 @@ public class StateManager : MonoBehaviour
     {
         channel.OnNeedChanged -= StateUpdate;
     }
-
-    public void SpriteChange(Pets pet)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 }
