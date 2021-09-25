@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeadState : IState
+public class DeadState :  IState
 {
-    [SerializeField] Sprite dead;
+    
 
-    public void SpriteChange(Pet pet)
+    public void SpriteChange(Pets pet)
     {
-        pet.GetComponent<SpriteRenderer>().sprite = dead;
+        pet.GetComponent<SpriteRenderer>().color = Color.red;
+       
     }
 }
